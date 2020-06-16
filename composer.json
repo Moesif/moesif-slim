@@ -1,0 +1,37 @@
+{
+    "name": "moesif/moesif-slim",
+    "type": "library",
+    "description": "Moesif Collection/Data Ingestion Middleware for Slim Framework",
+    "keywords": ["Moesif", "Log","Debugging","Logging","Slim","API","Middleware"],
+    "homepage": "https://moesif.com",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "keyur@moesif.com",
+            "email": "keyur@moesif.com",
+            "homepage": "https://www.moesif.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.1",
+        "aza/thread": "~1.0",
+        "akrabat/ip-address-middleware": "^1.0",
+        "monolog/monolog": "^2.1",
+        "moesif/moesifapi-php": "^1.1"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~5.0",
+        "symfony/css-selector": "3.1.*",
+        "symfony/dom-crawler": "3.1.*"
+    },
+        "autoload": {
+        "psr-4": {
+            "Moesif\\": "src/Moesif",
+            "Moesif\\Sender\\": "vendor/moesif/moesifapi-php/src/Moesif/Sender"
+        }
+    }
+}
