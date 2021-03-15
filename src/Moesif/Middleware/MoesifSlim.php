@@ -28,6 +28,7 @@ class MoesifSlim {
         "debug"                 => false, // enable/disable debug mode
         "disableTransactionId"  => false, // enable/disable transactionId
         "logBody"               => true, // enable/disable logging Body
+        "disableForking"        => false, // enable/disable forking
     );
 
     /**
@@ -53,7 +54,8 @@ class MoesifSlim {
         $this->debug = $this->moesifOptions['debug'];
         $this->disableTransactionId = $this->moesifOptions['disableTransactionId'];
         $this->logBody = $this->moesifOptions['logBody'];
-        
+        $this->disableForking = $this->moesifOptions['disableForking'];
+
         // Logger
         // the default date format is "Y-m-d H:i:s"
         $dateFormat = "Y n j, g:i a";
@@ -71,7 +73,7 @@ class MoesifSlim {
 
         if (!is_null($this->applicationId)) {
             $this->transactionId = null;
-            $this->moesifApi = MoesifApi::getInstance($this->applicationId, ['fork'=>true, 'debug'=>$this->debug]);
+            $this->moesifApi = MoesifApi::getInstance($this->applicationId, ['fork'=>!$this->disableForking, 'debug'=>$this->debug]);
             $this->samplingPercentage = 100;
             $this->lastUpdatedTime = getCurrentTime();
             $this->eTag = null;
