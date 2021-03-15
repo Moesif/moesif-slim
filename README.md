@@ -210,6 +210,10 @@ Optional, If true, will print debug messages using Illuminate\Support\Facades\Lo
 Type: `Boolean`
 Optional, Default true, Set to false to remove logging request and response body to Moesif.
 
+#### __`disableForking`__
+Type: `Boolean` 
+Optional, If true, this will disable forking. For the best performance, the SDK forks a process to send events by default. However, this requires your PHP environment to not have exec disabled via disable_functions.
+
 ## Update a Single User
 
 Create or update a user profile in Moesif.
