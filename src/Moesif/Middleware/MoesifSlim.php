@@ -18,7 +18,42 @@ include('BodySerializer.php');
 include('AppConfig.php');
 include('LoggerHelpers.php');
 
+
 class MoesifSlim {
+    /**
+     * @var string|null
+     */
+    protected $applicationId;
+
+    /**
+     * @var bool
+     */
+    protected $debug;
+
+    /**
+     * @var bool
+     */
+    protected $disableTransactionId;
+
+    /**
+     * @var bool
+     */
+    protected $logBody;
+
+    /**
+     * @var bool
+     */
+    protected $disableForking;
+
+    /**
+     * @var string|null
+     */
+    protected $transactionId;
+
+    /**
+     * @var object|null
+     */
+    protected $moesifApi;
 
     /**
      * Default options that can be overridden via the $moesifOptions constructor arg
