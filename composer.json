@@ -17,9 +17,9 @@
         "slim/slim": "4.*",
         "slim/psr7": "^1.1",
         "aza/thread": "~1.0",
-        "akrabat/ip-address-middleware": "^1.0",
+        "akrabat/ip-address-middleware": "^2.6",
         "monolog/monolog": "^2.1",
-        "moesif/moesifapi-php": "^1.1"
+        "moesif/moesifapi-php": "^1.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
